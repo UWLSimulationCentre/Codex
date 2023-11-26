@@ -138,47 +138,47 @@ Home As screen:
                 Y: =4
                 ZIndex: =2
 
-        Container3_10 As groupContainer.manualLayoutContainer:
+        Container3_13 As groupContainer.manualLayoutContainer:
             Fill: =RGBA(254, 150, 119, 1)
             Height: =62
             Width: =385
             X: =17
-            Y: =185
-            ZIndex: =4
+            Y: =187
+            ZIndex: =6
 
-            Image1_10 As image:
+            Image1_13 As image:
                 Height: =53
-                Image: ='196123'
+                Image: ='5261261'
                 OnSelect: |-
-                    =Launch("https://simemr.sammcnab.co.uk/interface/login/login.php?site=default")
+                    =Launch("https://projects.sammcnab.co.uk/")
                 Width: =49
                 X: =4
                 Y: =4
                 ZIndex: =1
 
-            Label3_10 As label:
+            Label3_14 As label:
                 Align: =Align.Center
                 Color: =RGBA(255, 255, 255, 1)
                 Height: =53
                 OnSelect: |-
-                    =Launch("https://simemr.sammcnab.co.uk/interface/login/login.php?site=default")
-                Text: ="SimEMR - Simulated Patient Records"
+                    =Launch("https://projects.sammcnab.co.uk/")
+                Text: ="Simulation Centre 360 Tour (LON)"
                 Width: =323
                 X: =53
                 Y: =4
                 ZIndex: =2
 
-        Container3_11 As groupContainer.manualLayoutContainer:
+        Container3_14 As groupContainer.manualLayoutContainer:
             Fill: =RGBA(254, 150, 119, 1)
             Height: =62
             Width: =385
             X: =17
-            Y: =258
-            ZIndex: =5
+            Y: =262
+            ZIndex: =7
 
-            Image1_11 As image:
+            Image1_14 As image:
                 Height: =53
-                Image: ='3514816'
+                Image: ='5261261'
                 OnSelect: |-
                     =Launch("https://projects.sammcnab.co.uk/")
                 Width: =49
@@ -186,13 +186,13 @@ Home As screen:
                 Y: =4
                 ZIndex: =1
 
-            Label3_11 As label:
+            Label3_15 As label:
                 Align: =Align.Center
                 Color: =RGBA(255, 255, 255, 1)
                 Height: =53
                 OnSelect: |-
                     =Launch("https://projects.sammcnab.co.uk/")
-                Text: ="SimProjects - Project Management"
+                Text: ="Simulation Centre 360 Tour (REA)"
                 Width: =323
                 X: =53
                 Y: =4
