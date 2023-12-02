@@ -198,6 +198,36 @@ Home As screen:
                 Y: =4
                 ZIndex: =2
 
+        Container3_10 As groupContainer.manualLayoutContainer:
+            Fill: =RGBA(254, 150, 119, 1)
+            Height: =62
+            Width: =385
+            X: =17
+            Y: =335
+            ZIndex: =8
+
+            Image1_10 As image:
+                Height: =53
+                Image: ='1487869'
+                OnSelect: |-
+                    =Launch("https://apps.powerapps.com/play/e/a334f803-c7e9-e554-9e2e-f8a20c6d36a4/a/55f294eb-11c2-4dc2-86b0-0ddd4b4d6fb1?tenantId=b0abd1ed-4966-4274-9f19-59dd663e81f5&hint=29889c8b-fe5f-40e5-a536-0193f41600cc&sourcetime=1701545855209")
+                Width: =49
+                X: =4
+                Y: =4
+                ZIndex: =1
+
+            Label3_10 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =53
+                OnSelect: |-
+                    =Launch("https://apps.powerapps.com/play/e/a334f803-c7e9-e554-9e2e-f8a20c6d36a4/a/55f294eb-11c2-4dc2-86b0-0ddd4b4d6fb1?tenantId=b0abd1ed-4966-4274-9f19-59dd663e81f5&hint=29889c8b-fe5f-40e5-a536-0193f41600cc&sourcetime=1701545855209")
+                Text: ="OSCE Recording Timing Application"
+                Width: =323
+                X: =53
+                Y: =4
+                ZIndex: =2
+
     CentreContainer As groupContainer.manualLayoutContainer:
         Fill: =RGBA(152, 64, 99, 1)
         Height: =635
