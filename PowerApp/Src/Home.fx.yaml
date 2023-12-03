@@ -228,6 +228,36 @@ Home As screen:
                 Y: =4
                 ZIndex: =2
 
+        Container3_11 As groupContainer.manualLayoutContainer:
+            Fill: =RGBA(254, 150, 119, 1)
+            Height: =62
+            Width: =385
+            X: =17
+            Y: =408
+            ZIndex: =9
+
+            Image1_11 As image:
+                Height: =53
+                Image: ='3616049'
+                OnSelect: |-
+                    =Launch("https://apps.powerapps.com/play/e/a334f803-c7e9-e554-9e2e-f8a20c6d36a4/a/3705af06-e7ba-4bf7-85d2-9cf5cb677e4a?tenantId=b0abd1ed-4966-4274-9f19-59dd663e81f5&hint=506fb8b9-e729-4850-a14c-1f955110d52e&sourcetime=1701605455489")
+                Width: =49
+                X: =4
+                Y: =4
+                ZIndex: =1
+
+            Label3_11 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =53
+                OnSelect: |-
+                    =Launch("https://apps.powerapps.com/play/e/a334f803-c7e9-e554-9e2e-f8a20c6d36a4/a/3705af06-e7ba-4bf7-85d2-9cf5cb677e4a?tenantId=b0abd1ed-4966-4274-9f19-59dd663e81f5&hint=506fb8b9-e729-4850-a14c-1f955110d52e&sourcetime=1701605455489")
+                Text: ="Student Mobile Application"
+                Width: =323
+                X: =53
+                Y: =4
+                ZIndex: =2
+
     CentreContainer As groupContainer.manualLayoutContainer:
         Fill: =RGBA(152, 64, 99, 1)
         Height: =635
