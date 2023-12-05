@@ -120,7 +120,7 @@ Home As screen:
                 Height: =53
                 Image: ='5156157'
                 OnSelect: |-
-                    =Launch("https://apps.powerapps.com/play/e/default-b0abd1ed-4966-4274-9f19-59dd663e81f5/a/a58ce0c1-0101-41cc-ba6b-32afb59140ba?tenantId=b0abd1ed-4966-4274-9f19-59dd663e81f5&source=sharebutton&sourcetime=1695980773653")
+                    =Launch("https://simcentreteam.crm11.dynamics.com/main.aspx?appid=3fdc1ea4-298e-ee11-be36-002248c87728&pagetype=entitylist&etn=contact&viewid=0d5d377b-5e7c-47b5-bab1-a5cb8b4ac105&viewType=1039")
                 Width: =49
                 X: =4
                 Y: =4
@@ -131,7 +131,7 @@ Home As screen:
                 Color: =RGBA(255, 255, 255, 1)
                 Height: =53
                 OnSelect: |-
-                    =Launch("https://apps.powerapps.com/play/e/default-b0abd1ed-4966-4274-9f19-59dd663e81f5/a/a58ce0c1-0101-41cc-ba6b-32afb59140ba?tenantId=b0abd1ed-4966-4274-9f19-59dd663e81f5&source=sharebutton&sourcetime=1695980773653")
+                    =Launch("https://simcentreteam.crm11.dynamics.com/main.aspx?appid=3fdc1ea4-298e-ee11-be36-002248c87728&pagetype=entitylist&etn=contact&viewid=0d5d377b-5e7c-47b5-bab1-a5cb8b4ac105&viewType=1039")
                 Text: ="HPL & Actor Management System"
                 Width: =323
                 X: =53
