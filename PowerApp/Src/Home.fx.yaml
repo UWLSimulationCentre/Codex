@@ -1,0 +1,435 @@
+Home As screen:
+    Fill: =If(viewDarkMode=true,RGBA(48, 48, 48, 0.94),RGBA(237, 237, 237, 1))
+
+    Container1 As groupContainer.horizontalAutoLayoutContainer:
+        DropShadow: =If(viewDarkMode=true,DropShadow.ExtraBold,DropShadow.Regular)
+        Height: =86
+        LayoutMode: =LayoutMode.Auto
+        Width: =1366
+        ZIndex: =1
+
+        Icon2 As icon.Lightbulb:
+            AccessibleLabel: ="Icon"
+            AlignInContainer: =AlignInContainer.Center
+            Color: =If(viewDarkMode=true,RGBA(237, 237, 237, 1),RGBA(18, 18, 18, 1))
+            Icon: =Icon.Lightbulb
+            OnSelect: =If(viewDarkMode=true,Set(viewDarkMode,false),Set(viewDarkMode,true))
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            TabIndex: =0
+            ZIndex: =1
+
+        Label4 As label:
+            Align: =Align.Center
+            AlignInContainer: =AlignInContainer.Center
+            Color: =If(viewDarkMode=true,RGBA(237, 237, 237, 1),RGBA(18, 18, 18, 1))
+            FillPortions: =1
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Bold
+            Size: =30
+            Text: ="Welcome to the Simulation Centre Launchpad, " & Office365Users.MyProfile().GivenName & "!"
+            ZIndex: =2
+
+    Container2 As groupContainer.horizontalAutoLayoutContainer:
+        Height: =682
+        LayoutMode: =LayoutMode.Auto
+        Width: =1366
+        Y: =86
+        ZIndex: =2
+
+        Container4 As groupContainer.verticalAutoLayoutContainer:
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =1
+
+            Label1 As label:
+                Align: =Align.Center
+                AlignInContainer: =AlignInContainer.Stretch
+                Color: =If(viewDarkMode=true,RGBA(237, 237, 237, 1),RGBA(18, 18, 18, 1))
+                Font: =Font.Lato
+                FontWeight: =FontWeight.Semibold
+                Size: =20
+                Text: ="Tools"
+                ZIndex: =1
+
+            Gallery1 As gallery.galleryVertical:
+                AccessibleLabel: ="Icon"
+                DelayItemLoading: =true
+                Items: =Filter(Sort('Launchpad Content','Display Order',SortOrder.Ascending),Category.Value="Tool")
+                Layout: =Layout.Vertical
+                LayoutMinHeight: =287
+                LayoutMinWidth: =320
+                LoadingSpinner: =LoadingSpinner.Data
+                OnSelect: =Launch(ThisItem.Link)
+                ShowScrollbar: =false
+                TabIndex: =0
+                TemplatePadding: =10
+                TemplateSize: =80
+                Transition: =Transition.Push
+                ZIndex: =2
+
+                Container11 As groupContainer.manualLayoutContainer:
+                    BorderColor: =If(viewDarkMode=true,RGBA(102, 102, 102, 1),RGBA(0, 0, 0, 1))
+                    BorderThickness: =3
+                    DropShadow: =DropShadow.ExtraBold
+                    Fill: =If(viewDarkMode=true,RGBA(77, 77, 77, 1),RGBA(255,255,255,1))
+                    Height: =80
+                    PaddingBottom: =10
+                    PaddingLeft: =10
+                    PaddingRight: =10
+                    PaddingTop: =10
+                    RadiusBottomLeft: =5
+                    RadiusBottomRight: =5
+                    RadiusTopLeft: =5
+                    RadiusTopRight: =5
+                    Width: =Parent.TemplateWidth
+                    ZIndex: =1
+
+                    Image4 As image:
+                        AccessibleLabel: ="Icon"
+                        Height: =55
+                        Image: =ThisItem.Icon
+                        OnSelect: =Launch(ThisItem.Link)
+                        TabIndex: =0
+                        Width: =55
+                        X: =9
+                        Y: =11
+                        ZIndex: =1
+
+                    Container12 As groupContainer.manualLayoutContainer:
+                        BorderColor: =If(ThisItem.Category.Value="Tool",RGBA(54, 176, 75, 1),If(ThisItem.Category.Value="Resources",RGBA(221, 79, 14, 1),RGBA(168, 0, 0, 1)))
+                        BorderThickness: =3
+                        Fill: =If(viewDarkMode = true,If(ThisItem.Category.Value="Tool",RGBA(54, 176, 75, 0),If(ThisItem.Category.Value="Resources",RGBA(221, 79, 14, 0),RGBA(168, 0, 0, 0))),If(ThisItem.Category.Value="Tool",RGBA(54, 176, 75, 0.5),If(ThisItem.Category.Value="Resources",RGBA(221, 79, 14, 0.5),RGBA(168, 0, 0, 0.5))))
+                        Height: =41
+                        Width: =86
+                        X: =342
+                        Y: =18
+                        ZIndex: =3
+
+                        Label6 As label:
+                            Align: =Align.Center
+                            Color: =If(viewDarkMode = true,If(ThisItem.Category.Value="Tool",RGBA(54, 176, 75, 1),If(ThisItem.Category.Value="Resources",RGBA(221, 79, 14, 1),RGBA(168, 0, 0, 1))),If(ThisItem.Category.Value="Tool",RGBA(54, 176, 75, 1),If(ThisItem.Category.Value="Resources",RGBA(221, 79, 14, 1),RGBA(168, 0, 0, 1))))
+                            Font: =Font.Lato
+                            FontWeight: =FontWeight.Bold
+                            OnSelect: =Launch(ThisItem.Link)
+                            Size: =10
+                            TabIndex: =0
+                            Text: =ThisItem.Category.Value
+                            Width: =86
+                            ZIndex: =1
+
+                    Label6_3 As label:
+                        Align: =Align.Center
+                        Color: =RGBA(255, 71, 71, 1)
+                        Font: =Font.Lato
+                        FontWeight: =FontWeight.Bold
+                        Height: =18
+                        OnSelect: =Launch(ThisItem.Link)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =10
+                        TabIndex: =0
+                        Text: ="NEW"
+                        Visible: =If(ThisItem.New = true,true,false)
+                        Width: =86
+                        X: =160
+                        ZIndex: =4
+
+                    Label5_2 As label:
+                        Color: =If(viewDarkMode=true,RGBA(237, 237, 237, 1),RGBA(0, 0, 0, 1))
+                        Font: =Font.Lato
+                        FontWeight: =FontWeight.Bold
+                        Height: =24
+                        OnSelect: =Launch(ThisItem.Link)
+                        TabIndex: =0
+                        Text: =ThisItem.Title
+                        Width: =278
+                        X: =64
+                        Y: =11
+                        ZIndex: =5
+
+                    Label3_2 As label:
+                        Color: =If(viewDarkMode=true,RGBA(237, 237, 237, 1),RGBA(0, 0, 0, 1))
+                        Font: =Font.Lato
+                        FontWeight: =FontWeight.Lighter
+                        Height: =49
+                        Size: =10
+                        Text: =ThisItem.Description
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =267
+                        X: =64
+                        Y: =31
+                        ZIndex: =6
+
+        Container5 As groupContainer.verticalAutoLayoutContainer:
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =2
+
+            Label1_1 As label:
+                Align: =Align.Center
+                AlignInContainer: =AlignInContainer.Stretch
+                Color: =If(viewDarkMode=true,RGBA(237, 237, 237, 1),RGBA(18, 18, 18, 1))
+                Font: =Font.Lato
+                FontWeight: =FontWeight.Semibold
+                Size: =20
+                Text: ="Resources"
+                ZIndex: =1
+
+            Gallery1_1 As gallery.galleryVertical:
+                AccessibleLabel: ="Icon"
+                DelayItemLoading: =true
+                Items: =Filter(Sort('Launchpad Content','Display Order',SortOrder.Ascending),Category.Value="Resources")
+                Layout: =Layout.Vertical
+                LayoutMinHeight: =287
+                LayoutMinWidth: =320
+                LoadingSpinner: =LoadingSpinner.Data
+                ShowScrollbar: =false
+                TabIndex: =0
+                TemplatePadding: =10
+                TemplateSize: =80
+                Transition: =Transition.Push
+                ZIndex: =2
+
+                Container11_1 As groupContainer.manualLayoutContainer:
+                    BorderColor: =If(viewDarkMode=true,RGBA(102, 102, 102, 1),RGBA(0, 0, 0, 1))
+                    BorderThickness: =3
+                    DropShadow: =DropShadow.ExtraBold
+                    Fill: =If(viewDarkMode=true,RGBA(77, 77, 77, 1),RGBA(255,255,255,1))
+                    Height: =80
+                    PaddingBottom: =10
+                    PaddingLeft: =10
+                    PaddingRight: =10
+                    PaddingTop: =10
+                    RadiusBottomLeft: =5
+                    RadiusBottomRight: =5
+                    RadiusTopLeft: =5
+                    RadiusTopRight: =5
+                    Width: =Parent.TemplateWidth
+                    ZIndex: =1
+
+                    Image4_1 As image:
+                        AccessibleLabel: ="Icon"
+                        Height: =55
+                        Image: =ThisItem.Icon
+                        OnSelect: =Launch(ThisItem.Link)
+                        TabIndex: =0
+                        Width: =55
+                        X: =9
+                        Y: =11
+                        ZIndex: =1
+
+                    Label5_1 As label:
+                        Color: =If(viewDarkMode=true,RGBA(237, 237, 237, 1),RGBA(0, 0, 0, 1))
+                        Font: =Font.Lato
+                        FontWeight: =FontWeight.Bold
+                        Height: =24
+                        OnSelect: =Launch(ThisItem.Link)
+                        TabIndex: =0
+                        Text: =ThisItem.Title
+                        Width: =278
+                        X: =64
+                        Y: =11
+                        ZIndex: =2
+
+                    Container12_1 As groupContainer.manualLayoutContainer:
+                        BorderColor: =If(ThisItem.Category.Value="Tool",RGBA(54, 176, 75, 1),If(ThisItem.Category.Value="Resources",RGBA(221, 79, 14, 1),RGBA(168, 0, 0, 1)))
+                        BorderThickness: =3
+                        Fill: =If(viewDarkMode = true,If(ThisItem.Category.Value="Tool",RGBA(54, 176, 75, 0),If(ThisItem.Category.Value="Resources",RGBA(221, 79, 14, 0),RGBA(168, 0, 0, 0))),If(ThisItem.Category.Value="Tool",RGBA(54, 176, 75, 0.5),If(ThisItem.Category.Value="Resources",RGBA(221, 79, 14, 0.5),RGBA(168, 0, 0, 0.5))))
+                        Height: =41
+                        Width: =86
+                        X: =342
+                        Y: =18
+                        ZIndex: =3
+
+                        Label6_1 As label:
+                            Align: =Align.Center
+                            Color: =If(viewDarkMode = true,If(ThisItem.Category.Value="Tool",RGBA(54, 176, 75, 1),If(ThisItem.Category.Value="Resources",RGBA(221, 79, 14, 1),RGBA(168, 0, 0, 1))),If(ThisItem.Category.Value="Tool",RGBA(54, 176, 75, 1),If(ThisItem.Category.Value="Resources",RGBA(221, 79, 14, 1),RGBA(168, 0, 0, 1))))
+                            Font: =Font.Lato
+                            FontWeight: =FontWeight.Bold
+                            OnSelect: =Launch(ThisItem.Link)
+                            Size: =10
+                            TabIndex: =0
+                            Text: =ThisItem.Category.Value
+                            Width: =86
+                            ZIndex: =1
+
+                    Label6_6 As label:
+                        Align: =Align.Center
+                        Color: =RGBA(255, 71, 71, 1)
+                        Font: =Font.Lato
+                        FontWeight: =FontWeight.Bold
+                        Height: =18
+                        OnSelect: =Launch(ThisItem.Link)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =10
+                        TabIndex: =0
+                        Text: ="NEW"
+                        Visible: =If(ThisItem.New = true,true,false)
+                        Width: =86
+                        X: =160
+                        ZIndex: =5
+
+                    Label3_1 As label:
+                        Color: =If(viewDarkMode=true,RGBA(237, 237, 237, 1),RGBA(0, 0, 0, 1))
+                        Font: =Font.Lato
+                        FontWeight: =FontWeight.Lighter
+                        Height: =49
+                        Size: =10
+                        Text: =ThisItem.Description
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =267
+                        X: =64
+                        Y: =31
+                        ZIndex: =6
+
+        Container6 As groupContainer.verticalAutoLayoutContainer:
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =3
+
+            Label1_2 As label:
+                Align: =Align.Center
+                AlignInContainer: =AlignInContainer.Stretch
+                Color: =If(viewDarkMode=true,RGBA(237, 237, 237, 1),RGBA(18, 18, 18, 1))
+                Font: =Font.Lato
+                FontWeight: =FontWeight.Semibold
+                Size: =20
+                Text: ="Useful Information"
+                ZIndex: =1
+
+            Gallery1_2 As gallery.galleryVertical:
+                AccessibleLabel: ="Icon"
+                DelayItemLoading: =true
+                Items: =Filter(Sort('Launchpad Content','Display Order',SortOrder.Ascending),Category.Value="Information")
+                Layout: =Layout.Vertical
+                LayoutMinHeight: =287
+                LayoutMinWidth: =320
+                LoadingSpinner: =LoadingSpinner.Data
+                ShowScrollbar: =false
+                TabIndex: =0
+                TemplatePadding: =10
+                TemplateSize: =80
+                Transition: =Transition.Push
+                ZIndex: =2
+
+                Container11_2 As groupContainer.manualLayoutContainer:
+                    BorderColor: =If(viewDarkMode=true,RGBA(102, 102, 102, 1),RGBA(0, 0, 0, 1))
+                    BorderThickness: =3
+                    DropShadow: =DropShadow.ExtraBold
+                    Fill: =If(viewDarkMode=true,RGBA(77, 77, 77, 1),RGBA(255,255,255,1))
+                    Height: =80
+                    PaddingBottom: =10
+                    PaddingLeft: =10
+                    PaddingRight: =10
+                    PaddingTop: =10
+                    RadiusBottomLeft: =5
+                    RadiusBottomRight: =5
+                    RadiusTopLeft: =5
+                    RadiusTopRight: =5
+                    Width: =Parent.TemplateWidth
+                    ZIndex: =1
+
+                    Image4_2 As image:
+                        AccessibleLabel: ="Icon"
+                        Height: =55
+                        Image: =ThisItem.Icon
+                        OnSelect: =Launch(ThisItem.Link)
+                        TabIndex: =0
+                        Width: =55
+                        X: =9
+                        Y: =11
+                        ZIndex: =1
+
+                    Container12_2 As groupContainer.manualLayoutContainer:
+                        BorderColor: =If(ThisItem.Category.Value="Tool",RGBA(54, 176, 75, 1),If(ThisItem.Category.Value="Resources",RGBA(221, 79, 14, 1),RGBA(168, 0, 0, 1)))
+                        BorderThickness: =3
+                        Fill: =If(viewDarkMode = true,If(ThisItem.Category.Value="Tool",RGBA(54, 176, 75, 0),If(ThisItem.Category.Value="Resources",RGBA(221, 79, 14, 0),RGBA(168, 0, 0, 0))),If(ThisItem.Category.Value="Tool",RGBA(54, 176, 75, 0.5),If(ThisItem.Category.Value="Resources",RGBA(221, 79, 14, 0.5),RGBA(168, 0, 0, 0.5))))
+                        Height: =41
+                        Width: =86
+                        X: =342
+                        Y: =18
+                        ZIndex: =3
+
+                        Label6_2 As label:
+                            Align: =Align.Center
+                            Color: =If(viewDarkMode = true,If(ThisItem.Category.Value="Tool",RGBA(54, 176, 75, 1),If(ThisItem.Category.Value="Resources",RGBA(221, 79, 14, 1),RGBA(255, 71, 71, 1))),If(ThisItem.Category.Value="Tool",RGBA(54, 176, 75, 1),If(ThisItem.Category.Value="Resources",RGBA(221, 79, 14, 1),RGBA(168, 0, 0, 1))))
+                            Font: =Font.Lato
+                            FontWeight: =FontWeight.Bold
+                            OnSelect: =Launch(ThisItem.Link)
+                            Size: =10
+                            TabIndex: =0
+                            Text: =ThisItem.Category.Value
+                            Width: =86
+                            Y: =1
+                            ZIndex: =1
+
+                    Label6_4 As label:
+                        Align: =Align.Center
+                        Color: =RGBA(255, 71, 71, 1)
+                        Font: =Font.Lato
+                        FontWeight: =FontWeight.Bold
+                        Height: =18
+                        OnSelect: =Launch(ThisItem.Link)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =10
+                        TabIndex: =0
+                        Text: ="NEW"
+                        Visible: =If(ThisItem.New = true,true,false)
+                        Width: =86
+                        X: =160
+                        ZIndex: =4
+
+                    Label5_3 As label:
+                        Color: =If(viewDarkMode=true,RGBA(237, 237, 237, 1),RGBA(0, 0, 0, 1))
+                        Font: =Font.Lato
+                        FontWeight: =FontWeight.Bold
+                        Height: =24
+                        OnSelect: =Launch(ThisItem.Link)
+                        TabIndex: =0
+                        Text: =ThisItem.Title
+                        Width: =278
+                        X: =64
+                        Y: =11
+                        ZIndex: =5
+
+                    Label3_3 As label:
+                        Color: =If(viewDarkMode=true,RGBA(237, 237, 237, 1),RGBA(0, 0, 0, 1))
+                        Font: =Font.Lato
+                        FontWeight: =FontWeight.Lighter
+                        Height: =49
+                        Size: =10
+                        Text: =ThisItem.Description
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =267
+                        X: =64
+                        Y: =31
+                        ZIndex: =6
+
+    Label5 As label:
+        Align: =Align.Right
+        Color: =If(viewDarkMode=true,RGBA(237, 237, 237, 1),RGBA(0, 0, 0, 1))
+        Font: =Font.Lato
+        Height: =33
+        PaddingRight: =10
+        Text: ="V2.0.0"
+        X: =1216
+        Y: =735
+        ZIndex: =3
+

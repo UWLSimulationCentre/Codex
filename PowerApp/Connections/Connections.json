@@ -1,0 +1,50 @@
+{
+  "62c55482-e1db-4945-8993-c890a1d436f1": {
+    "appActions": [
+      "providers/PowerPlatform.Governance/Operations/Read"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://uwloffice365live.sharepoint.com/sites/simulationcentreteam": {
+        "dataSources": {
+          "Launchpad Content": {
+            "tableName": "e19d9ba2-c4c6-438e-af8f-879c84df8b31"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Launchpad Content"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "62c55482-e1db-4945-8993-c890a1d436f1"
+  },
+  "68fc2abc-cffc-4f05-893e-e9b8a9a4a363": {
+    "appActions": [
+      "MyProfile"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Users",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Users"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "68fc2abc-cffc-4f05-893e-e9b8a9a4a363"
+  }
+}
