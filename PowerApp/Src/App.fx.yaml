@@ -1,5 +1,6 @@
 App As appinfo:
     BackEnabled: =false
+    OnStart: =Set(viewDarkMode,false);Refresh('Launchpad Content')
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
